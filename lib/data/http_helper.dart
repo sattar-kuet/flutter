@@ -8,7 +8,6 @@ class HttpHelper {
   final String authority = 'api.openweathermap.org';
   final String path = 'data/2.5/weather';
   final String apiKey = '29c7503bd044159c3eab22f39848ede8';
-
   Future<Weather> getWeather(String cityName) async {
     Map<String, dynamic> parameters = {'q': cityName, 'appid': apiKey};
     Uri uri = Uri.https(authority, path, parameters);
